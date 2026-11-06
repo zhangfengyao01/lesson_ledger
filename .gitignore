@@ -1,0 +1,6 @@
+# 构建产物（APK 只走 GitHub Releases 资产，不进版本库）
+dist/
+
+# 系统杂项
+Thumbs.db
+Desktop.ini

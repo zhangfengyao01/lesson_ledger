@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>闪电记课 · 隐私政策</title>
+<style>
+  :root {
+    --fg: #1c1c1e;
+    --fg-dim: #5c5c61;
+    --bg: #ffffff;
+    --line: #e6e6ea;
+    --accent: #d97706;
+    --mark: #fff3d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #ececf0;
+      --fg-dim: #a0a0a8;
+      --bg: #16161a;
+      --line: #2e2e34;
+      --accent: #fbbf24;
+      --mark: #3a2d10;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+    max-width: 720px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.85 -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: -0.3px;
+  }
+  .meta {
+    margin: 0 0 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+    color: var(--fg-dim);
+    font-size: 14px;
+  }
+  h2 {
+    margin: 44px 0 14px;
+    font-size: 19px;
+    letter-spacing: -0.2px;
+  }
+  h2::before {
+    content: attr(data-n) ". ";
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  p, li { color: var(--fg); }
+  ul { padding-left: 22px; }
+  li { margin: 7px 0; }
+  li::marker { color: var(--fg-dim); }
+  .lead {
+    padding: 20px 22px;
+    margin: 0 0 12px;
+    border-left: 3px solid var(--accent);
+    background: var(--mark);
+    border-radius: 0 8px 8px 0;
+  }
+  .lead strong { color: var(--accent); }
+  code {
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--line);
+    font-size: 13.5px;
+    font-family: ui-monospace, Consolas, monospace;
+  }
+  table {
+    width: 100%;
+    margin: 18px 0;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  th, td {
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    color: var(--fg-dim);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+  }
+  td:first-child { white-space: nowrap; }
+  .todo {
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #fde2e2;
+    color: #b91c1c;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--fg-dim);
+    font-size: 13.5px;
+  }
+</style>
+</head>
+<body>
+
+<h1>闪电记课 隐私政策</h1>
+<p class="meta">适用平台：Android　·　生效日期：2026 年 10 月 27 日　·　版本 1.0</p>
+
+<div class="lead">
+  <strong>一句话说明：</strong>闪电记课是一款完全离线的单机工具。我们不要求你注册账号，不申请任何系统权限，不做任何网络通信，你的课时记录和凭证截图只保存在你自己的手机上，我们没有任何技术手段可以读取它们。
+</div>
+
+<h2 data-n="1">我们是谁</h2>
+<p>「闪电记课」（应用包名 <code>cn.shanshanjike.ledger</code>，以下简称"本应用"）是一款帮助培训教师、家教、课外辅导从业者记录上课明细、按结算周期统计课时与课酬、并生成报销单表格的效率工具。本应用由个人开发者独立开发与运营（以下简称"我们"）。</p>
+
+<h2 data-n="2">我们不收集任何个人信息</h2>
+<p>这是本政策中最重要的一条：</p>
+<ul>
+  <li>本应用<strong>不提供账号体系</strong>，无法识别你是谁。</li>
+  <li>本应用<strong>不申请任何 Android 系统权限</strong>，你能在手机的"应用权限"页面看到本应用的权限列表为空。</li>
+  <li>本应用<strong>没有网络访问能力</strong>，未在安装包中声明 <code>INTERNET</code> 权限，从操作系统层面就无法向任何服务器发送数据。</li>
+  <li>本应用<strong>不集成任何统计、埋点、广告、崩溃上报 SDK</strong>。</li>
+</ul>
+
+<h2 data-n="3">你录入的数据存在哪里</h2>
+<p>你在本应用中填写的所有内容（课时明细、班级、课程、金额、报销单明细、常用行程标签、排课模板等）以及你主动选择的凭证截图，全部保存在：</p>
+<ul>
+  <li>本应用的私有目录：<code>lesson_ledger.json</code>（结构化数据）与 <code>receipts/</code>（凭证图片）</li>
+  <li>上述目录属于 Android 应用沙盒，其他应用无法读取</li>
+  <li>数据<strong>不经过任何服务器中转</strong>，也不存在于我们或任何第三方的系统中</li>
+</ul>
+
+<h2 data-n="4">关于相册与文件选择</h2>
+<p>当你为报销单添加凭证截图时，本应用会调起 <strong>Android 系统自带的选择器</strong>（Storage Access Framework）。这个机制由操作系统控制：</p>
+<ul>
+  <li>我们只会在你主动点选某一张图片后，拿到<strong>那一张图片的副本</strong>；</li>
+  <li>我们无法浏览、遍历或读取你相册中的其他任何照片；</li>
+  <li>正因为使用系统选择器，本应用<strong>不需要申请存储或相册权限</strong>。</li>
+</ul>
+
+<h2 data-n="5">导出的文件与分享</h2>
+<p>当你导出报销单表格（xlsx）或备份包（zip）时：</p>
+<ul>
+  <li>文件在本机内部生成，保存路径由你选择（例如下载目录），或通过系统分享面板发送给你指定的应用（如微信、邮件）；</li>
+  <li>分享动作由<strong>你本人发起并指定接收方</strong>，数据流向完全由你控制；</li>
+  <li>本应用不会自动上传、备份或同步任何文件到云端。</li>
+</ul>
+
+<h2 data-n="6">第三方组件说明</h2>
+<p>本应用在开发中使用了若干开源软件库（用于界面渲染、Excel 表格生成、图片压缩、压缩包读写等）。这些库均为<strong>在本机运行的代码</strong>，不包含网络通信功能，也不会向各自的上游厂商回传任何数据。</p>
+
+<h2 data-n="7">我们不会做的事</h2>
+<table>
+  <tr><th>行为</th><th>本应用</th></tr>
+  <tr><td>收集设备标识（IMEI / OAID / Android ID）</td><td>不收集</td></tr>
+  <tr><td>读取通讯录、短信、通话记录</td><td>不收集</td></tr>
+  <tr><td>读取或上传相册内容</td><td>不收集</td></tr>
+  <tr><td>获取地理位置</td><td>不收集</td></tr>
+  <tr><td>向第三方共享、转让、公开披露你的数据</td><td>不会</td></tr>
+  <tr><td>用于广告推送或用户画像</td><td>不会</td></tr>
+  <tr><td>跨境传输数据</td><td>不会（无网络能力）</td></tr>
+</table>
+
+<h2 data-n="8">你的数据如何删除</h2>
+<ul>
+  <li><strong>删除单条记录：</strong>在对应列表项上执行删除操作，该条数据与关联凭证图片会一并从本机移除。</li>
+  <li><strong>清空全部数据：</strong>进入"设置 → 清空数据"，将删除本应用保存的全部记录、凭证图片与排课模板。此操作不可撤销，建议先导出一份备份包。</li>
+  <li><strong>彻底移除：</strong>卸载本应用会同时删除其私有目录下的全部数据，不留残留。</li>
+</ul>
+<p>由于我们从未获取过你的数据，因此不存在"需要向我们申请删除"的情形。</p>
+
+<h2 data-n="9">数据安全</h2>
+<p>你的数据安全性取决于手机本身的安全状态。我们建议：为手机设置锁屏密码；不要将手机随意交由他人使用；定期通过"设置 → 导出备份"生成 zip 备份包并妥善保管——该备份包含你的凭证截图，请勿上传至公开的位置。</p>
+
+<h2 data-n="10">未成年人保护</h2>
+<p>本应用是面向成年从业者的效率工具，不面向未成年人设计，也不会有意收集未成年人的任何信息。由于本应用不收集任何个人信息，不存在针对未成年人的数据处理场景。</p>
+
+<h2 data-n="11">本政策的更新</h2>
+<p>若本应用未来新增需要联网或需要系统权限的功能，我们会在功能上线前更新本政策，并在应用内以显著方式提示你阅读。本政策的历史版本可在本页面底部查询。</p>
+
+<h2 data-n="12">联系我们</h2>
+<p>对本政策有任何疑问、意见或投诉，可通过以下方式联系：</p>
+<ul>
+  <li>电子邮箱：<span class="todo">［请填写你的联系邮箱］</span></li>
+</ul>
+<p>我们会在收到邮件后 15 个工作日内答复。</p>
+
+<footer>
+  闪电记课 · 隐私政策 v1.0　·　最后更新：2026 年 10 月 27 日<br>
+  开发者：个人开发者　·　应用包名：cn.shanshanjike.ledger
+</footer>
+
+</body>
+</html>
